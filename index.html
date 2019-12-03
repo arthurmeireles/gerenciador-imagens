@@ -58,14 +58,14 @@
                 <form>
                     <div class="form-group">
                         <label for="formGroupExampleInput">Titulo da Imagem</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput"
+                        <input type="text" v-model="titulo" class="form-control" id="formGroupExampleInput"
                             placeholder="Digite o titulo da imagem">
                     </div>
 
                     <form>
                         <div class="form-group">
                             <label for="exampleFormControlFile1">Imagem</label>
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                            <input type="file" v-model="url" class="form-control-file" id="exampleFormControlFile1">
                         </div>
                     </form>
                     <button data-toggle="collapse" href="#collapseExample"  type="submit" class="btn btn-outline-dark">Montar card</button>
@@ -75,23 +75,26 @@
 
         </div>
 
+        <div class="navbar navbar-dark bg-dark">
+            <h2 class="titulo-galeria">Galeria</h2>
+        </div>
 
         <div id="galeria" class="col-lg-12">
-            <div class="navbar navbar-dark bg-dark">
-                <h2 class="titulo-galeria">Galeria</h2>
-            </div>
             <card></card>
         </div>
 
     </div>
 
-    <script type="text/javascript">
+    <script type="text/javascript">9
         new Vue[{
             el: '#app',
             components: {
                 'cadastro': {
 
-                }
+                },
+                'card': {
+
+                },
             }
         }]
     </script>
